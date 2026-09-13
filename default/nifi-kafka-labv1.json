@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1789315943080,
+    "description" : "",
+    "identifier" : "nifi-kafka-labv1",
+    "lastModifiedTimestamp" : 1789315943080,
+    "name" : "nifi-kafka-lab_v1",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
