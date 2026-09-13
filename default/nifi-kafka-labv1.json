@@ -2156,7 +2156,7 @@
         "y" : 8.0
       },
       "properties" : {
-        "routed" : "SELECT\n  *,\n  CASE\n    WHEN level IN ('WARN', 'ERROR') THEN 'logs.alerts'\n    ELSE 'logs.enriched'\n  END AS dest_topic\nFROM FLOWFILE",
+        "routed" : "SELECT\n  *,\n  CASE\n    WHEN level IN ('WARN', 'ERROR') THEN CAST('logs.alerts' AS VARCHAR(32))\n    ELSE CAST('logs.enriched' AS VARCHAR(32))\n  END AS dest_topic\nFROM FLOWFILE",
         "Include Zero Record FlowFiles" : "true",
         "Default Decimal Scale" : "0",
         "Record Writer" : "d3d8dc6d-10a4-3cbe-9472-c0b3c535055b",
@@ -2568,6 +2568,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "nifi-kafka-labv1",
-    "timestamp" : 1789315944326
+    "timestamp" : 1789316211437
   }
 }
